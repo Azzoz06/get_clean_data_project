@@ -17,14 +17,14 @@ The assumptions for running the script are:
 3. The script performs the same for the training data set resulting in a R object called `train.full`
 4. Both R objects are merged in a single data frame called `merged.set` with correct column names
 5. Feature data is read and a subset of measurements are kept in the the R object called `var.to.keep`
-   - 
-   
-
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
-
-
+6. A `cleansed.data` data frame is created to subset only the measurements and  column names for measurements are set
+7. Activity labels are read from  input file as follows:
+  - 1 WALKING
+  - 2 WALKING_UPSTAIRS
+  - 3 WALKING_DOWNSTAIRS
+  - 4 SITTING
+  - 5 STANDING
+  - 6 LAYING
+8. Aggregation of the data is performed on a subject/activity group-by basis. Aggregation function is `MEAN`
+9. Activity labels are used in place of `Id` in the data frame
+10. Data frame is exported to a the `./data/tidy.data` file.
